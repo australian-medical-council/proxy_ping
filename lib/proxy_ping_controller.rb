@@ -1,7 +1,5 @@
-class ProxyPingController < ApplicationController
-  include ExemptFromLogging
-  
-  # session :off, :only => 'ping'
+class ProxyPingController < ActionController::Base
+  include ProxyPing::ExemptFromLogging
 
   def ping
     render :text => 'pong'
